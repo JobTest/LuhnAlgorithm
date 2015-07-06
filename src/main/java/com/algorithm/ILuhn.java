@@ -20,7 +20,7 @@ public interface ILuhn {
      * @return
      * @throws NullPointerException
      */
-    public List<Integer> doubleEvenDigits(List<Integer> numbers) throws NullPointerException;
+    List<Integer> doubleEvenDigits(List<Integer> numbers) throws NullPointerException;
 
     /**
      * If in the process of doubling the value is greater than 9, add the two digits of the result
@@ -28,7 +28,7 @@ public interface ILuhn {
      * @param numbers
      * @return
      */
-    public Integer calculateDigits(List<Integer> numbers);
+    Integer calculateDigits(List<Integer> numbers);
 
     /**
      * Sum all digits
@@ -36,7 +36,8 @@ public interface ILuhn {
      * @param card_number
      * @return
      * @throws NumberFormatException
+     * @throws IllegalArgumentException
      */
-    public boolean checkAlgorithm(String card_number) throws NumberFormatException;
+    boolean checkAlgorithm(String card_number) throws NumberFormatException, IllegalArgumentException;
 
 }

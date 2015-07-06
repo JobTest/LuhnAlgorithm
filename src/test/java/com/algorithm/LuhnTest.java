@@ -9,12 +9,12 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 /**
- * @author Lazarchuk Aleksandr
- * @version 1.1
- * @date 05/07/2015
- * **********************************
- * The test case for 'Luhn Algorithm'
- */
+* @author Lazarchuk Aleksandr
+* @version 1.1
+* @date 05/07/2015
+* **********************************
+* The test case for 'Luhn Algorithm'
+*/
 public class LuhnTest {
 
     private ILuhn luhn;
@@ -27,10 +27,6 @@ public class LuhnTest {
     /**
      * Double every second digit, from the rightmost digit
      */
-    @Test (expected = NullPointerException.class)
-    public void testDoubleEvenDigitsNull(){
-        assertNull("Here is test NULL:", luhn.doubleEvenDigits(null));
-    }
     @Test
     public void testDoubleEvenDigits(){
         List<Integer> actual_double_even_digits_single = Arrays.asList(1);
@@ -77,14 +73,40 @@ public class LuhnTest {
     /**
      * Take the sum modulo 10
      */
-    @Test (expected = NullPointerException.class)
+    @Test
     public void testCheckAlgorithmNull(){
-        assertFalse("Here is test NullPointerException:", luhn.checkAlgorithm(null));
+        String expected_check_algorithm_null = "Illegal Argument";
+
+        try {
+            luhn.checkAlgorithm(null);
+            fail();
+        } catch (IllegalArgumentException ex) {
+            assertEquals("Here is test NullPointerException:", expected_check_algorithm_null, ex.getMessage());
+        }
     }
-    @Test (expected = NumberFormatException.class)
+    @Test
+    public void testCheckAlgorithmEmpty(){
+        String actual_check_algorithm_empty = " ";
+        String expected_check_algorithm_empty = "Illegal Argument";
+
+        try {
+            luhn.checkAlgorithm(actual_check_algorithm_empty);
+            fail();
+        } catch (IllegalArgumentException ex) {
+            assertEquals("Here is test NullPointerException:", expected_check_algorithm_empty, ex.getMessage());
+        }
+    }
+    @Test
     public void testCheckAlgorithmInvalid(){
-        String actual_check_algorithm = "a23456d";
-        assertFalse("Here is test NumberFormatException:", luhn.checkAlgorithm(actual_check_algorithm));
+        String actual_check_algorithm_invalid = "a23456d";
+        String expected_check_algorithm_invalid = "For input string: \"a\"";
+
+        try {
+            luhn.checkAlgorithm(actual_check_algorithm_invalid);
+            fail();
+        } catch (IllegalArgumentException ex) {
+            assertEquals("Here is test NumberFormatException:", expected_check_algorithm_invalid, ex.getMessage());
+        }
     }
     @Test
     public void testCheckAlgorithm(){
