@@ -18,7 +18,6 @@ public interface ILuhn {
      *
      * @param numbers
      * @return
-     * @throws NullPointerException
      */
     List<Integer> doubleEvenDigits(List<Integer> numbers);
 

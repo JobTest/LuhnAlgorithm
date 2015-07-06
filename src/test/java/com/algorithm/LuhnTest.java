@@ -98,7 +98,7 @@ public class LuhnTest {
     }
     @Test
     public void testCheckAlgorithmInvalid(){
-        String actual_check_algorithm_invalid = "a23456d";
+        String actual_check_algorithm_invalid = "23456a";
         String expected_check_algorithm_invalid = "For input string: \"a\"";
 
         try {
