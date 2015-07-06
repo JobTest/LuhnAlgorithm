@@ -20,7 +20,7 @@ public interface ILuhn {
      * @return
      * @throws NullPointerException
      */
-    List<Integer> doubleEvenDigits(List<Integer> numbers) throws NullPointerException;
+    List<Integer> doubleEvenDigits(List<Integer> numbers);
 
     /**
      * If in the process of doubling the value is greater than 9, add the two digits of the result

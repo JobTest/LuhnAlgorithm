@@ -80,8 +80,8 @@ public class LuhnTest {
         try {
             luhn.checkAlgorithm(null);
             fail();
-        } catch (IllegalArgumentException ex) {
-            assertEquals("Here is test NullPointerException:", expected_check_algorithm_null, ex.getMessage());
+        } catch(IllegalArgumentException ex) {
+            assertEquals("Here is test IllegalArgumentException:", expected_check_algorithm_null, ex.getMessage());
         }
     }
     @Test
@@ -92,19 +92,19 @@ public class LuhnTest {
         try {
             luhn.checkAlgorithm(actual_check_algorithm_empty);
             fail();
-        } catch (IllegalArgumentException ex) {
-            assertEquals("Here is test NullPointerException:", expected_check_algorithm_empty, ex.getMessage());
+        } catch(IllegalArgumentException ex) {
+            assertEquals("Here is test IllegalArgumentException:", expected_check_algorithm_empty, ex.getMessage());
         }
     }
     @Test
-    public void testCheckAlgorithmInvalid(){
+    public void testCheckAlgorithmInvalid(){ //NumberFormatException
         String actual_check_algorithm_invalid = "a23456d";
         String expected_check_algorithm_invalid = "For input string: \"a\"";
 
         try {
             luhn.checkAlgorithm(actual_check_algorithm_invalid);
             fail();
-        } catch (IllegalArgumentException ex) {
+        } catch(NumberFormatException ex) {
             assertEquals("Here is test NumberFormatException:", expected_check_algorithm_invalid, ex.getMessage());
         }
     }

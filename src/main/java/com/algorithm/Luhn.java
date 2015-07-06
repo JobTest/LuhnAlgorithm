@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 public class Luhn implements ILuhn {
 
     @Override
-    public List<Integer> doubleEvenDigits(List<Integer> numbers) throws NullPointerException {
+    public List<Integer> doubleEvenDigits(List<Integer> numbers) {
         for (int number=(numbers.size()-2); 0<=number; number-=2)
             numbers.set( number, sum(toDigitList(String.valueOf(numbers.get(number)*2))) );
         return numbers;
