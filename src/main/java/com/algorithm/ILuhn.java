@@ -13,7 +13,7 @@ import java.util.List;
 public interface ILuhn {
 
     /**
-     * (Behavior #1) Double every second digit, from the rightmost digit
+     * Double every second digit, from the rightmost digit
      *
      * @param numbers
      * @return
@@ -22,7 +22,7 @@ public interface ILuhn {
     public List<Integer> doubleEvenDigits(List<Integer> numbers) throws NullPointerException;
 
     /**
-     * (Behavior #2) If in the process of doubling the value is greater than 9, add the two digits of the result
+     * If in the process of doubling the value is greater than 9, add the two digits of the result
      *
      * @param numbers
      * @return
@@ -30,7 +30,7 @@ public interface ILuhn {
     public Integer calculateDigits(List<Integer> numbers);
 
     /**
-     * (Behavior #3) Sum all digits
+     * Sum all digits
      *
      * @param card_number
      * @return

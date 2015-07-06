@@ -25,7 +25,7 @@ public class LuhnTest {
     }
 
     /**
-     * (Behavior #1) Double every second digit, from the rightmost digit
+     * Double every second digit, from the rightmost digit
      */
     @Test (expected = NullPointerException.class)
     public void testDoubleEvenDigitsNull(){
@@ -55,7 +55,7 @@ public class LuhnTest {
     }
 
     /**
-     * (Behavior #2) Sum all digits
+     * Sum all digits
      */
     @Test
     public void testCalculateDigits(){
@@ -75,7 +75,7 @@ public class LuhnTest {
     }
 
     /**
-     * (Behavior #3) Take the sum modulo 10
+     * Take the sum modulo 10
      */
     @Test (expected = NullPointerException.class)
     public void testCheckAlgorithmNull(){
