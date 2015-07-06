@@ -29,18 +29,18 @@ public class LuhnTest {
      */
     @Test
     public void testDoubleEvenDigits(){
-        List<Integer> actual_double_even_digits_single = Arrays.asList(1);
-        List<Integer> actual_double_even_digits_min = Arrays.asList(2,2);
-        List<Integer> actual_double_even_digits_max = Arrays.asList(9,9,9,9,9,9,9);
-        List<Integer> actual_double_even_digits_zero = Arrays.asList(0,0,0,0,0,0,0);
-        List<Integer> actual_double_even_digits = Arrays.asList(2,2,2,2,2,2,2);
-        List<Integer> actual_double_even_digits_real = Arrays.asList(4,9,9,2,7,3,9,8,7,1,6);
+        List<Integer>   actual_double_even_digits_single = Arrays.asList(1);
+        List<Integer>      actual_double_even_digits_min = Arrays.asList(2,2);
+        List<Integer>      actual_double_even_digits_max = Arrays.asList(9,9,9,9,9,9,9);
+        List<Integer>     actual_double_even_digits_zero = Arrays.asList(0,0,0,0,0,0,0);
+        List<Integer>          actual_double_even_digits = Arrays.asList(2,2,2,2,2,2,2);
+        List<Integer>     actual_double_even_digits_real = Arrays.asList(4,9,9,2,7,3,9,8,7,1,6);
         List<Integer> expected_double_even_digits_single = Arrays.asList(1);
-        List<Integer> expected_double_even_digits_min = Arrays.asList(4,2);
-        List<Integer> expected_double_even_digits_max = Arrays.asList(9,9,9,9,9,9,9);
-        List<Integer> expected_double_even_digits_zero = Arrays.asList(0,0,0,0,0,0,0);
-        List<Integer> expected_double_even_digits = Arrays.asList(2,4,2,4,2,4,2);
-        List<Integer> expected_double_even_digits_real = Arrays.asList(4,9,9,4,7,6,9,7,7,2,6);
+        List<Integer>    expected_double_even_digits_min = Arrays.asList(4,2);
+        List<Integer>    expected_double_even_digits_max = Arrays.asList(9,9,9,9,9,9,9);
+        List<Integer>   expected_double_even_digits_zero = Arrays.asList(0,0,0,0,0,0,0);
+        List<Integer>        expected_double_even_digits = Arrays.asList(2,4,2,4,2,4,2);
+        List<Integer>   expected_double_even_digits_real = Arrays.asList(4,9,9,4,7,6,9,7,7,2,6);
 
         assertEquals("Here is test double_even_digits_single:", expected_double_even_digits_single, luhn.doubleEvenDigits(actual_double_even_digits_single));
         assertEquals("Here is test double_even_digits_min:", expected_double_even_digits_min, luhn.doubleEvenDigits(actual_double_even_digits_min));
@@ -56,13 +56,13 @@ public class LuhnTest {
     @Test
     public void testCalculateDigits(){
         List<Integer> actual_double_even_digits_single = Arrays.asList(1);
-        List<Integer> actual_double_even_digits_min = Arrays.asList(2,2);
-        List<Integer> actual_double_even_digits_zero = Arrays.asList(0,0,0,0,0,0,0);
-        List<Integer> actual_calculate_digits = Arrays.asList(4,9,9,4,7,6,9,7,7,2,6);
-        Integer expected_calculate_digits_single = 1;
-        Integer expected_calculate_digits_min = 4;
-        Integer expected_calculate_digits_zero = 0;
-        Integer expected_calculate_digits = 70;
+        List<Integer>    actual_double_even_digits_min = Arrays.asList(2,2);
+        List<Integer>   actual_double_even_digits_zero = Arrays.asList(0,0,0,0,0,0,0);
+        List<Integer>          actual_calculate_digits = Arrays.asList(4,9,9,4,7,6,9,7,7,2,6);
+        Integer       expected_calculate_digits_single = 1;
+        Integer          expected_calculate_digits_min = 4;
+        Integer         expected_calculate_digits_zero = 0;
+        Integer              expected_calculate_digits = 70;
 
         assertEquals("Here is test double_even_digits_single:", expected_calculate_digits_single, luhn.calculateDigits(actual_double_even_digits_single));
         assertEquals("Here is test double_even_digits_min:", expected_calculate_digits_min, luhn.calculateDigits(actual_double_even_digits_min));
