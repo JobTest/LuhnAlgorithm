@@ -17,7 +17,7 @@ public interface ILuhn {
      * Double every second digit, from the rightmost digit
      *
      * @param numbers
-     * @return
+     * @return List<Integer>
      */
     List<Integer> doubleEvenDigits(List<Integer> numbers);
 
@@ -25,7 +25,7 @@ public interface ILuhn {
      * If in the process of doubling the value is greater than 9, add the two digits of the result
      *
      * @param numbers
-     * @return
+     * @return Integer
      */
     Integer calculateDigits(List<Integer> numbers);
 
@@ -33,7 +33,7 @@ public interface ILuhn {
      * Sum all digits
      *
      * @param card_number
-     * @return
+     * @return boolean
      * @throws NumberFormatException
      * @throws IllegalArgumentException
      */
