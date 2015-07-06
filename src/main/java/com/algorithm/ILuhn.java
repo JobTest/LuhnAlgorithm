@@ -5,6 +5,7 @@ import java.util.List;
 /**
  * @author Lazarchuk Aleksandr
  * @version 1.1
+ * @date 05/07/2015
  * {@link https://bitbucket.org/OpsIT/luhn-validation/commits/49927398716}
  * ***********************************************************************
  * The interface 'Luhn Algorithm'
