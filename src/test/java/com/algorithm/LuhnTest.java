@@ -97,7 +97,7 @@ public class LuhnTest {
         }
     }
     @Test
-    public void testCheckAlgorithmInvalid(){ //NumberFormatException
+    public void testCheckAlgorithmInvalid(){
         String actual_check_algorithm_invalid = "a23456d";
         String expected_check_algorithm_invalid = "For input string: \"a\"";
 
